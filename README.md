@@ -13,27 +13,27 @@ This project is a simple Registration system with **CRUD** operations. The backe
 ### Backend Setup
 1. **Clone Repository**:
 
-   git clone https://github.com/your-repo-url.git
+   git clone https://github.com/arifhussain1999/INI8-Assignment
    cd your-repo-directory
 Database: Create a database in MySQL:
 
-CREATE DATABASE registration;
+## CREATE DATABASE registration;
 Update application.properties with your database details.
 
-Build and Run: 
+## Build and Run: 
 
 mvn clean install
 mvn spring-boot:run
 Backend runs at http://localhost:8080.
 
-Frontend Setup
+## Frontend Setup
 Navigate to the frontend directory:
 cd frontend
 Serve Frontend:
 Option 1: Use Live Server in VS Code.
 Option 2: Run with Node.js:
 
-npx http-server .
+## npx http-server .
 Frontend runs at http://localhost:5500.
 API Endpoints
 GET /registrations/get-list: Fetch all registrations.
@@ -50,10 +50,9 @@ json
   "email": "john@example.com",
   "dob": "1990-01-01"
 }
-CORS Issue Fix
-To resolve CORS errors, update WebConfig in Spring Boot:
 
-java
+## CORS Issue Fix
+To resolve CORS errors, update WebConfig in Spring Boot:
 
 @Override
 public void addCorsMappings(CorsRegistry registry) {
@@ -61,7 +60,8 @@ public void addCorsMappings(CorsRegistry registry) {
             .allowedOrigins("http://localhost:5500")
             .allowedMethods("GET", "POST", "PUT", "DELETE");
 }
-Run the Project
+
+## Run the Project
 Start the backend at http://localhost:8080.
 Serve the frontend at http://localhost:5500.
 
